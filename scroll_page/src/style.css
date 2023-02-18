@@ -11,6 +11,15 @@ section {
   justify-content: center;
   align-items: center;
   color: #fff;
+  /* See Article: https://css-tricks.com/practical-css-scroll-snapping/ */
+  scroll-snap-align: start;
+}
+
+.container {
+  /* set the scroll axis and motion */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .one {
