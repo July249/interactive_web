@@ -9,7 +9,7 @@ const end = section.querySelector("h1");
 const controller = new ScrollMagic.Controller();
 
 // Scenes
-const scene = new ScrollMagic.Scene({
+let scene = new ScrollMagic.Scene({
   // duration must be the length of video time
   // in our sample video, it has 9000ms
   // so, duration set 9000
@@ -21,6 +21,16 @@ const scene = new ScrollMagic.Scene({
 })
   .addIndicators()
   .setPin(intro) // it works for trigger stick on the top of the page
+  .addTo(controller);
+
+// Text Animation
+const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
+let scene2 = new ScrollMagic.Scene({
+  duration: 3000,
+  triggerElement: intro,
+  triggerHook: 0,
+})
+  .setTween(textAnim)
   .addTo(controller);
 
 // Video Animation
