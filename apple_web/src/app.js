@@ -19,7 +19,7 @@ let scene = new ScrollMagic.Scene({
   // in our case, we want to operate it instantly and immediately on the top of the page
   triggerHook: 0,
 })
-  .addIndicators()
+  // .addIndicators()
   .setPin(intro) // it works for trigger stick on the top of the page
   .addTo(controller);
 
